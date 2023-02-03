@@ -1,11 +1,17 @@
 Package: OligoCounter
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Count up a list of oligos in paired fastq files
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Shamit Soneji
+Maintainer: Shamit Soneji <shamit.soneji@med.lu.se>
+Description: The package will take a file of oligos and count their occurance in a set of paired fastq files and return the number.
+License: GPL3
 Encoding: UTF-8
 LazyData: true
+Depends:
+    R (>= 4.0.0)
+biocViews:
+    ShortRead
+Imports:
+    ShortRead
+RoxygenNote: 7.2.3
