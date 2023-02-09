@@ -13,7 +13,7 @@
 #'
 readOligos <- function(file){
 
-  oligos <- read.delim("/home/shamit/Sigvardsson/Tina/Tina_MiSeq_27Oct_2022/Ebf1_library_oligos.csv",sep=",",header=T)
+  oligos <- read.delim(file,sep=",",header=T)
   print(paste(nrow(oligos),"oligos have been read. Congratulations on coming this far."))
   oligos
 }

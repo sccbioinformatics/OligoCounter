@@ -16,9 +16,15 @@ countOligos  <- function(oligos,fastq.names){
 
   final.counts <- NULL
 
+  #pb <- progress_bar$new(format = "[:bar] :current/:total (:percent)",total = length(fastq.names$R1))
+  pb <- progress_bar$new(format = "[:bar] :current of :total fastq sets (:percent)",total = length(fastq.names$R1))
+  pb$tick(0)
+  #Sys.sleep(1)
+
   for(k in 1:length(fastq.names$R1)){
 
-    print(k)
+    #print(k)
+
 
     r1 <- ShortRead::readFastq(fastq.names$path,fastq.names$R1[k])
     r2 <- ShortRead::readFastq(fastq.names$path,fastq.names$R2[k])
@@ -27,7 +33,7 @@ countOligos  <- function(oligos,fastq.names){
     lst.r2 <- list()
 
     for(i in 1:nrow(oligos)){
-      print(i)
+      #print(i)
       lst.r1[[i]] <- table(grepl(  toupper(oligos[i,2]) ,ShortRead::sread(r1)))
       lst.r2[[i]] <- table(grepl(  toupper(oligos[i,2]) ,ShortRead::sread(r2)))
     }
@@ -55,7 +61,8 @@ countOligos  <- function(oligos,fastq.names){
     final.counts <- cbind(final.counts,all.counts)
 
 
-    #final.counts
+    pb$tick(1)
+
   }
 
   final.counts
