@@ -9,6 +9,7 @@ devtools::install_github("sccbioinformatics/OligoCounter")
 To use it:
 
 Read oligos:
+
 oligos <- readOligos("My_oligos.csv")
 
 Read fastqnames:
