@@ -8,6 +8,8 @@ devtools::install_github("sccbioinformatics/OligoCounter")
 
 To use it:
 
+library(OligoCounter)
+
 Read oligos:
 
 oligos <- readOligos("My_oligos.csv")
