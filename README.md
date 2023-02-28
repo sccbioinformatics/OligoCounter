@@ -14,7 +14,7 @@ library(OligoCounter)
 
 oligos <- readOligos("My_oligos.csv")
 
-### Read fastqnames:
+### Read fastq file names:
 
 fq.files <- readFastqFileNames(path=".",pattern="fastq")
 
