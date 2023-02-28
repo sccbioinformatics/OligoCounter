@@ -1,6 +1,6 @@
 ## Welcome to OligoCounter!
 
-To install OligoCounter:
+# To install OligoCounter:
 
 install.packages("devtools")
 
