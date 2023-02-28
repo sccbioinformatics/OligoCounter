@@ -1,4 +1,4 @@
-Welcome to OligoCounter!
+## Welcome to OligoCounter!
 
 To install OligoCounter:
 
